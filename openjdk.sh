@@ -31,7 +31,8 @@ build () {
         --enable-unlimited-crypto \
         --disable-warnings-as-errors \
         --with-vendor-name="${OPENJDK_VENDOR_NAME}" \
-        --with-vendor-url="${OPENJDK_VENDOR_URL}"
+        --with-vendor-url="${OPENJDK_VENDOR_URL}" \
+        $@
     make images legacy-jre-image
 
     find "build" -maxdepth 1 -iname 'linux-*' -exec cp -r "{}/images/jdk" "../openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}" \;

@@ -32,10 +32,11 @@ build () {
         --with-update-version="${OPENJDK_UPDATE_VERSION}" \
         --with-build-number="b${OPENJDK_BUILD_VERSION}" \
         --enable-unlimited-crypto \
-        --with-extra-cflags="-Wno-error=nonnull -Wno-error=deprecated-declarations -Wno-error=stringop-overflow= -Wno-error=return-type -Wno-error=cpp -fno-lifetime-dse -fno-delete-null-pointer-checks -fcommon -fno-exceptions -Wno-error=format-overflow=" \
-        --with-extra-cxxflags="-fcommon -fno-exceptions" \
+        --with-extra-cflags="-Wno-error=nonnull -Wno-error=deprecated-declarations -Wno-error=stringop-overflow= -Wno-error=return-type -Wno-error=cpp -fno-lifetime-dse -fno-delete-null-pointer-checks -fno-exceptions -Wno-error=format-overflow=" \
+        --with-extra-cxxflags="-fno-exceptions" \
         --with-vendor-name="${OPENJDK_VENDOR_NAME}" \
-        --with-vendor-url="${OPENJDK_VENDOR_URL}"
+        --with-vendor-url="${OPENJDK_VENDOR_URL}" \
+        $@
     make
     make install
 

@@ -25,13 +25,14 @@ build () {
         --with-version-build="${OPENJDK_BUILD_VERSION}" \
         --with-version-pre="" \
         --with-version-opt="" \
-        --with-extra-cflags="-fcommon" \
-        --with-extra-cxxflags="-fcommon" \
+        --with-extra-cflags="" \
+        --with-extra-cxxflags="" \
         --with-jvm-features=zgc \
         --enable-unlimited-crypto \
         --disable-warnings-as-errors \
         --with-vendor-name="${OPENJDK_VENDOR_NAME}" \
-        --with-vendor-url="${OPENJDK_VENDOR_URL}"
+        --with-vendor-url="${OPENJDK_VENDOR_URL}" \
+        $@
     make images legacy-jre-image
 
     find "build" -maxdepth 1 -iname 'linux-*' -exec cp -r "{}/images/jdk" "../openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}" \;
