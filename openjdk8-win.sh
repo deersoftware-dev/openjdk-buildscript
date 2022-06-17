@@ -21,10 +21,7 @@ download_source () {
 build () {
     INSTALL_DIR="${PWD}/${OUTPUT_DIR}"
 
-    cp openjdk8_gcc11.patch "${OUTPUT_DIR}/source/gcc11.patch"
-
     pushd "${OUTPUT_DIR}/source"
-    patch -Np1 -i gcc11.patch
 
     bash configure \
         --prefix="${INSTALL_DIR}/install" \
