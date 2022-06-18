@@ -24,10 +24,9 @@ download_source () {
 
 build () {
     INSTALL_DIR="${PWD}/${OUTPUT_DIR}"
+    FREETYPE_SRC="$(find "${OUTPUT_DIR}/deps/freetype" -maxdepth 1 -mindepth 1 -iname 'freetype*')"
 
     pushd "${OUTPUT_DIR}/source"
-
-    FREETYPE_SRC="$(find deps/freetype -maxdepth 1 -mindepth 1 -iname 'freetype*')"
 
     bash configure \
         --prefix="${INSTALL_DIR}/install" \
