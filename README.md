@@ -12,7 +12,7 @@ DeerSoftware is currently unable to provide support or official builds for MacOS
 
 ## OpenJDK versions supported
 
-We only support versions 8 LTS and 17 LTS, as they are the most used and updated respectively.
+We only support LTS versions (8, 11, 17), as they are the most stable and offer a longer support time than other versions.
 
 ## Building in Linux
 
@@ -75,6 +75,20 @@ bash openjdk8.sh
 
 ```sh
 bash openjdk-win.sh
+```
+
+## Windows: Building OpenJDK 11
+
+- autoconf
+- Cygwin
+- make
+- OpenJDK 11
+- unzip
+- Visual Studio 2017 Build Tools with C++ module
+- zip
+
+```sh
+bash openjdk11-win.sh
 ```
 
 ## Windows: Building OpenJDK 8
