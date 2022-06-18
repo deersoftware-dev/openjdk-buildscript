@@ -77,7 +77,7 @@ bash openjdk8.sh
 bash openjdk-win.sh
 ```
 
-### Windows: Building OpenJDK 8
+## Windows: Building OpenJDK 8
 
 - autoconf
 - Cygwin
