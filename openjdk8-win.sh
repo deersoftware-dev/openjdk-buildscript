@@ -13,12 +13,17 @@ OPENJDK_VENDOR_URL="www.deersoftware.dev"
 
 OUTPUT_DIR="output/openjdk${OPENJDK_VERSION}"
 
+download_deps () {
+    mkdir -p "${OUTPUT_DIR}/deps"
+    if [ ! -f  "${OUTPUT_DIR}/deps/freetype.tar.gz" ] | [ ! -d  "${OUTPUT_DIR}/deps/freetype" ] ; then
+        wget "http://download.savannah.gnu.org/releases/freetype/freetype-old/freetype-2.5.3.tar.gz" -O "${OUTPUT_DIR}/deps/freetype.tar.gz"
+        mkdir "${OUTPUT_DIR}/deps/freetype"
+        tar -xzf "${OUTPUT_DIR}/deps/freetype.tar.gz" -C "${OUTPUT_DIR}/deps/freetype"
+    fi
+}
+
 download_source () {
     mkdir -p "${OUTPUT_DIR}"
-    mkdir "${OUTPUT_DIR}/deps"
-    wget "http://download.savannah.gnu.org/releases/freetype/freetype-old/freetype-2.5.3.tar.gz" -O "${OUTPUT_DIR}/deps/freetype.tar.gz"
-    mkdir "${OUTPUT_DIR}/deps/freetype"
-    tar -xzf "${OUTPUT_DIR}/deps/freetype.tar.gz" -C "${OUTPUT_DIR}/deps/freetype"
     git clone -b "jdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-${OPENJDK_TAG_VERSION}" "https://github.com/openjdk/jdk${OPENJDK_VERSION}u.git" "${OUTPUT_DIR}/source"
 }
 
@@ -34,7 +39,7 @@ build () {
         --with-update-version="${OPENJDK_UPDATE_VERSION}" \
         --with-build-number="b${OPENJDK_BUILD_VERSION}" \
         --enable-unlimited-crypto \
-        --with-extra-cflags="-Wno-error=nonnull -Wno-error=deprecated-declarations -Wno-error=stringop-overflow= -Wno-error=return-type -Wno-error=cpp -fno-lifetime-dse -fno-delete-null-pointer-checks -fno-exceptions -Wno-error=format-overflow=" \
+        --with-extra-cflags="-Wno-error=deprecated-declarations -Wno-error=stringop-overflow= -Wno-error=return-type -Wno-error=cpp -fno-lifetime-dse -fno-delete-null-pointer-checks -fno-exceptions -Wno-error=format-overflow=" \
         --with-extra-cxxflags="-fno-exceptions" \
         --with-vendor-name="${OPENJDK_VENDOR_NAME}" \
         --with-vendor-url="${OPENJDK_VENDOR_URL}" \
@@ -60,6 +65,8 @@ package () {
 
     popd
 }
+
+download_deps
 
 if [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}/source" ]
 then
