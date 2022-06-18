@@ -43,9 +43,9 @@ build () {
 package () {
     pushd "${OUTPUT_DIR}"
     
-    zip "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jdk.zip" "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}"
+    zip -r "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jdk.zip" "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}"
 
-    zip "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre.zip" "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre"
+    zip -r "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre.zip" "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre"
 
     popd
 }
