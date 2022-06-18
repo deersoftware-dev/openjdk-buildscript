@@ -15,6 +15,10 @@ OUTPUT_DIR="output/openjdk${OPENJDK_VERSION}"
 
 download_source () {
     mkdir -p "${OUTPUT_DIR}"
+    mkdir "${OUTPUT_DIR}/deps"
+    wget "http://download.savannah.gnu.org/releases/freetype/freetype-2.12.1.tar.gz" -O "${OUTPUT_DIR}/deps/freetype.tar.gz"
+    mkdir "${OUTPUT_DIR}/deps/freetype"
+    tar -xzf "${OUTPUT_DIR}/deps/freetype.tar.gz" -C "${OUTPUT_DIR}/deps/freetype"
     git clone -b "jdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-${OPENJDK_TAG_VERSION}" "https://github.com/openjdk/jdk${OPENJDK_VERSION}u.git" "${OUTPUT_DIR}/source"
 }
 
@@ -22,6 +26,8 @@ build () {
     INSTALL_DIR="${PWD}/${OUTPUT_DIR}"
 
     pushd "${OUTPUT_DIR}/source"
+
+    FREETYPE_SRC="$(find deps/freetype -maxdepth 1 -mindepth 1 -iname 'freetype*')"
 
     bash configure \
         --prefix="${INSTALL_DIR}/install" \
@@ -32,7 +38,8 @@ build () {
         --with-extra-cflags="-Wno-error=nonnull -Wno-error=deprecated-declarations -Wno-error=stringop-overflow= -Wno-error=return-type -Wno-error=cpp -fno-lifetime-dse -fno-delete-null-pointer-checks -fno-exceptions -Wno-error=format-overflow=" \
         --with-extra-cxxflags="-fno-exceptions" \
         --with-vendor-name="${OPENJDK_VENDOR_NAME}" \
-        --with-vendor-url="${OPENJDK_VENDOR_URL}"
+        --with-vendor-url="${OPENJDK_VENDOR_URL}" \
+        --with-freetype-src="${FREETYPE_SRC}"
     make
     make install
 
@@ -51,7 +58,7 @@ package () {
     zip "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jdk.zip" "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}"
 
     zip "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre.zip" "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre"
-    
+
     popd
 }
 
