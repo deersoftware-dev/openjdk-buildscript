@@ -39,8 +39,8 @@ build () {
         --with-update-version="${OPENJDK_UPDATE_VERSION}" \
         --with-build-number="b${OPENJDK_BUILD_VERSION}" \
         --enable-unlimited-crypto \
-        --with-extra-cflags="" \
-        --with-extra-cxxflags="" \
+        --with-extra-cflags="/EHsc /wd4091" \
+        --with-extra-cxxflags="/EHsc /wd4091" \
         --with-vendor-name="${OPENJDK_VENDOR_NAME}" \
         --with-vendor-url="${OPENJDK_VENDOR_URL}" \
         --with-freetype-src="${FREETYPE_SRC}"
