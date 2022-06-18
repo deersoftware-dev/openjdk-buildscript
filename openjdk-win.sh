@@ -47,13 +47,6 @@ package () {
 
     zip "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre.zip" "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre"
 
-    find "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre/lib" -iname 'libawt_xawt.*' -exec rm {} \;
-    find "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre/lib" -iname 'libjawt.*' -exec rm {} \;
-    find "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre/lib" -iname 'libjsound.*' -exec rm {} \;
-    find "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre/lib" -iname 'libsplashscreen.*' -exec rm {} \;
-
-    zip "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre_headless.zip" "openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre"
-
     popd
 }
 

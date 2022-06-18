@@ -51,14 +51,7 @@ package () {
     zip "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jdk.zip" "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}"
 
     zip "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre.zip" "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre"
-
-    rm "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre/bin/policytool"
-    find "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre/lib" -iname 'libjsound.so' -exec rm {} \;
-    find "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre/lib" -iname 'libjsoundalsa.so' -exec rm {} \;
-    find "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre/lib" -iname 'libsplashscreen.so' -exec rm {} \;
-
-    zip "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre_headless.zip" "openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre"
-
+    
     popd
 }
 
