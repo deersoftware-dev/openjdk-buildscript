@@ -16,7 +16,7 @@ OUTPUT_DIR="output/openjdk${OPENJDK_VERSION}"
 download_source () {
     mkdir -p "${OUTPUT_DIR}"
     mkdir "${OUTPUT_DIR}/deps"
-    wget "http://download.savannah.gnu.org/releases/freetype/freetype-2.12.1.tar.gz" -O "${OUTPUT_DIR}/deps/freetype.tar.gz"
+    wget "http://download.savannah.gnu.org/releases/freetype/freetype-old/freetype-2.5.3.tar.gz" -O "${OUTPUT_DIR}/deps/freetype.tar.gz"
     mkdir "${OUTPUT_DIR}/deps/freetype"
     tar -xzf "${OUTPUT_DIR}/deps/freetype.tar.gz" -C "${OUTPUT_DIR}/deps/freetype"
     git clone -b "jdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-${OPENJDK_TAG_VERSION}" "https://github.com/openjdk/jdk${OPENJDK_VERSION}u.git" "${OUTPUT_DIR}/source"
@@ -61,12 +61,12 @@ package () {
     popd
 }
 
-if [[ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}/source" ]]
+if [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}/source" ]
 then
     download_source
 fi
 
-if [[ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}" ]] || [[ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre" ]]
+if [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}" ] || [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre" ]
 then
     build
 fi
