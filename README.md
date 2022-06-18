@@ -75,6 +75,7 @@ bash openjdk-win.sh
 - OpenJDK 8
 - unzip
 - Visual Studio 2015 Community Edition with Visual C++
+- wget
 - zip
 
 ```sh
