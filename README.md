@@ -43,6 +43,16 @@ We only support versions 8 LTS and 17 LTS, as they are the most used and updated
 bash openjdk.sh
 ```
 
+## Arch Linux: Building OpenJDK 11
+
+- base
+- base-devel
+- jdk11-openjdk
+
+```sh
+bash openjdk11.sh
+```
+
 ## Arch Linux: Building OpenJDK 8
 
 - base
