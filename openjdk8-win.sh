@@ -39,8 +39,8 @@ build () {
         --with-update-version="${OPENJDK_UPDATE_VERSION}" \
         --with-build-number="b${OPENJDK_BUILD_VERSION}" \
         --enable-unlimited-crypto \
-        --with-extra-cflags="-Wno-error=deprecated-declarations -Wno-error=stringop-overflow= -Wno-error=return-type -Wno-error=cpp -fno-lifetime-dse -fno-delete-null-pointer-checks -fno-exceptions -Wno-error=format-overflow=" \
-        --with-extra-cxxflags="-fno-exceptions" \
+        --with-extra-cflags="" \
+        --with-extra-cxxflags="" \
         --with-vendor-name="${OPENJDK_VENDOR_NAME}" \
         --with-vendor-url="${OPENJDK_VENDOR_URL}" \
         --with-freetype-src="${FREETYPE_SRC}"
@@ -68,13 +68,11 @@ package () {
 
 download_deps
 
-if [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}/source" ]
-then
+if [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}/source" ] ; then
     download_source
 fi
 
-if [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}" ] || [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre" ]
-then
+if [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}" ] || [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}u${OPENJDK_UPDATE_VERSION}-jre" ] ; then
     build
 fi
 
