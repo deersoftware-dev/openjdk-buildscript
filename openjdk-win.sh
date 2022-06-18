@@ -34,8 +34,8 @@ build () {
         --with-vendor-url="${OPENJDK_VENDOR_URL}"
     make images legacy-jre-image
 
-    find "build" -maxdepth 1 -iname 'linux-*' -exec cp -r "{}/images/jdk" "../openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}" \;
-    find "build" -maxdepth 1 -iname 'linux-*' -exec cp -r "{}/images/jre" "../openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre" \;
+    find "build" -maxdepth 1 -iname 'windows-*' -exec cp -r "{}/images/jdk" "../openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}" \;
+    find "build" -maxdepth 1 -iname 'windows-*' -exec cp -r "{}/images/jre" "../openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre" \;
 
     popd
 }
