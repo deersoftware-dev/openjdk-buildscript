@@ -50,13 +50,11 @@ package () {
     popd
 }
 
-if [ ! -d "${OUTPUT_DIR}/source" ]
-then
+if [ ! -d "${OUTPUT_DIR}/source" ] ; then
     download_source
 fi
 
-if [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}" ] || [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre" ]
-then
+if [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}" ] || [ ! -d "${OUTPUT_DIR}/openjdk${OPENJDK_VERSION}.${OPENJDK_UPDATE_VERSION}-jre" ] ; then
     build
 fi
 
