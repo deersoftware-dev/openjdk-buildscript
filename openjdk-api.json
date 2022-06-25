@@ -1,146 +1,13 @@
 {
-    "openjdk8": [
+    "openjdk17-jdk": [
         {
             "version": "8u332",
             "files": {
                 "windows": {
                     "amd64": [
                         {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jdk-windows-amd64.zip",
-                            "checksum": "b7686fd9c9a2b669ede8931523232fdc9eb3ea33a4c8214f3994a431657cfb8f",
-                            "type": "jdk",
-                            "extension": "zip"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre-windows-amd64.zip",
-                            "checksum": "5479561d7508e61b94f4f4924d36b164c3efb5bbdc38a1801e39abcb9c31abde",
-                            "type": "jre",
-                            "extension": "zip"
-                        }
-                    ]
-                },
-                "linux": {
-                    "amd64": [
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jdk-linux-amd64.tar.gz",
-                            "checksum": "32e9564b89ec03584cfe77dcf279b339a3f624be57a08aaa0e85c8448ab63c72",
-                            "type": "jdk",
-                            "extension": "tar.gz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jdk-linux-amd64.tar.xz",
-                            "checksum": "c938250230cbdc07dffc316ef18738954f6ab5c71af33c601bef40b5beb5cd8f",
-                            "type": "jdk",
-                            "extension": "tar.xz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre-linux-amd64.tar.gz",
-                            "checksum": "b0cdd2a5f966d5ee799df52dd9522c1477bf103388488e7f630276916e78ac5a",
-                            "type": "jre",
-                            "extension": "tar.gz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre-linux-amd64.tar.xz",
-                            "checksum": "9181f0ddbfc21c8c94ef6df9c2923db33d2633d82c65e72e554fe592fbdd6415",
-                            "type": "jre",
-                            "extension": "tar.xz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre_headless-linux-amd64.tar.gz",
-                            "checksum": "d0929f70646241794452c696196cf3302f59b86a6015aa12f24f2d14898793b8",
-                            "type": "jre-headless",
-                            "extension": "tar.gz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre_headless-linux-amd64.tar.xz",
-                            "checksum": "839ba3d235f38543b5e9c89fbff9265a12d3e42f6e5a2150f16bc7112dbbfd93",
-                            "type": "jre-headless",
-                            "extension": "tar.xz"
-                        }
-                    ]
-                }
-            }
-        }
-    ],
-    "openjdk11": [
-        {
-            "version": "11.0.15",
-            "files": {
-                "windows": {
-                    "amd64": [
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jdk-windows-amd64.zip",
-                            "checksum": "67ba89d7db0e43115d4471d718ef44f226a65dc3a6b29f51e0144342b3fd990a",
-                            "type": "jdk",
-                            "extension": "zip"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre-windows-amd64.zip",
-                            "checksum": "a4ad5b14d9da2881713ba9369401a1d1290664a8304c7b1622603aec79ae0795",
-                            "type": "jre",
-                            "extension": "zip"
-                        }
-                    ]
-                },
-                "linux": {
-                    "amd64": [
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jdk-linux-amd64.tar.gz",
-                            "checksum": "9ec93240057d6bf9ea4f92d012aeed5fa034c348406ef4037c1e6ad426780762",
-                            "type": "jdk",
-                            "extension": "tar.gz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jdk-linux-amd64.tar.xz",
-                            "checksum": "da71db5ca69df92f998660d2573eaac30dc40df50f5d79b360ccbf66659d606c",
-                            "type": "jdk",
-                            "extension": "tar.xz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre-linux-amd64.tar.gz",
-                            "checksum": "c6ea7165d622513f877ae61e261ba9aadb7eb476feff90e41e8a18251adb7c6e",
-                            "type": "jre",
-                            "extension": "tar.gz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre-linux-amd64.tar.xz",
-                            "checksum": "847036ff678cfbdee61b91a0c20c37c5a094b237d1ea131318d2806ee1af0c43",
-                            "type": "jre",
-                            "extension": "tar.xz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre_headless-linux-amd64.tar.gz",
-                            "checksum": "2d15537593225479fb7e646d7f3cd25981e55fbecd37e6d2d83e7832648b0b72",
-                            "type": "jre-headless",
-                            "extension": "tar.gz"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre_headless-linux-amd64.tar.xz",
-                            "checksum": "e02fab4457c7de1d0dcd47e13448a105c810893cfe8ed901af56879460175d68",
-                            "type": "jre-headless",
-                            "extension": "tar.xz"
-                        }
-                    ]
-                }
-            }
-        }
-    ],
-    "openjdk17": [
-        {
-            "version": "17.0.3",
-            "files": {
-                "windows": {
-                    "amd64": [
-                        {
                             "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk17.0.3-jdk-windows-amd64.zip",
                             "checksum": "1531ea5a2adc1dedd9d40f1e19943d61f963c66d0760ce77ac526ad951a176b8",
-                            "type": "jdk",
-                            "extension": "zip"
-                        },
-                        {
-                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk17.0.3-jre-windows-amd64.zip",
-                            "checksum": "d8d7f9f4047136a4312b01cb23ab812868348c6ad530cf4a7fea8871cfb0adeb",
-                            "type": "jre",
                             "extension": "zip"
                         }
                     ]
@@ -150,37 +17,224 @@
                         {
                             "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk17.0.3-jdk-linux-amd64.tar.gz",
                             "checksum": "cd69ea6d5d89d826cead174db5aa79544e1f8bd6461d0644eb11cb6e3d5a962a",
-                            "type": "jdk",
                             "extension": "tar.gz"
                         },
                         {
                             "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk17.0.3-jdk-linux-amd64.tar.xz",
                             "checksum": "7fdcf5bbb977fe62cf946b4513cb8f0bff25e50d780ae35dff5055058fd3f6cd",
-                            "type": "jdk",
                             "extension": "tar.xz"
-                        },
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "openjdk17-jre": [
+        {
+            "version": "8u332",
+            "files": {
+                "windows": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk17.0.3-jre-windows-amd64.zip",
+                            "checksum": "d8d7f9f4047136a4312b01cb23ab812868348c6ad530cf4a7fea8871cfb0adeb",
+                            "extension": "zip"
+                        }
+                    ]
+                },
+                "linux": {
+                    "amd64": [
                         {
                             "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk17.0.3-jre-linux-amd64.tar.gz",
                             "checksum": "a873a964f17f249726e18302aa4e417356b992172fe9c20743c571e1ce1344d0",
-                            "type": "jre",
                             "extension": "tar.gz"
                         },
                         {
                             "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk17.0.3-jre-linux-amd64.tar.xz",
                             "checksum": "22e5c91aa288941ec0f27b6f1de97418814bea4c1985b5cc192ff48a1bcdac19",
-                            "type": "jre",
                             "extension": "tar.xz"
-                        },
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "openjdk17-jre_headless": [
+        {
+            "version": "8u332",
+            "files": {
+                "linux": {
+                    "amd64": [
                         {
                             "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk17.0.3-jre_headless-linux-amd64.tar.gz",
                             "checksum": "1b860fe65cd705d253d1d8cbf9a20ebd5ea8ffb00f1bdaba4b01fd1b2706dd6f",
-                            "type": "jre-headless",
                             "extension": "tar.gz"
                         },
                         {
                             "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk17.0.3-jre_headless-linux-amd64.tar.xz",
                             "checksum": "5e7e49cec808b27e1c419427728fc21f3020db3f10064aa5cd918b81f033f5c3",
-                            "type": "jre-headless",
+                            "extension": "tar.xz"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "openjdk11-jdk": [
+        {
+            "version": "8u332",
+            "files": {
+                "windows": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jdk-windows-amd64.zip",
+                            "checksum": "67ba89d7db0e43115d4471d718ef44f226a65dc3a6b29f51e0144342b3fd990a",
+                            "extension": "zip"
+                        }
+                    ]
+                },
+                "linux": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jdk-linux-amd64.tar.gz",
+                            "checksum": "9ec93240057d6bf9ea4f92d012aeed5fa034c348406ef4037c1e6ad426780762",
+                            "extension": "tar.gz"
+                        },
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jdk-linux-amd64.tar.xz",
+                            "checksum": "da71db5ca69df92f998660d2573eaac30dc40df50f5d79b360ccbf66659d606c",
+                            "extension": "tar.xz"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "openjdk11-jre": [
+        {
+            "version": "8u332",
+            "files": {
+                "windows": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre-windows-amd64.zip",
+                            "checksum": "a4ad5b14d9da2881713ba9369401a1d1290664a8304c7b1622603aec79ae0795",
+                            "extension": "zip"
+                        }
+                    ]
+                },
+                "linux": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre-linux-amd64.tar.gz",
+                            "checksum": "c6ea7165d622513f877ae61e261ba9aadb7eb476feff90e41e8a18251adb7c6e",
+                            "extension": "tar.gz"
+                        },
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre-linux-amd64.tar.xz",
+                            "checksum": "847036ff678cfbdee61b91a0c20c37c5a094b237d1ea131318d2806ee1af0c43",
+                            "extension": "tar.xz"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "openjdk11-jre_headless": [
+        {
+            "version": "11.0.15",
+            "files": {
+                "linux": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre_headless-linux-amd64.tar.gz",
+                            "checksum": "2d15537593225479fb7e646d7f3cd25981e55fbecd37e6d2d83e7832648b0b72",
+                            "extension": "tar.gz"
+                        },
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk11.0.15-jre_headless-linux-amd64.tar.xz",
+                            "checksum": "e02fab4457c7de1d0dcd47e13448a105c810893cfe8ed901af56879460175d68",
+                            "extension": "tar.xz"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "openjdk8-jdk": [
+        {
+            "version": "8u332",
+            "files": {
+                "windows": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jdk-windows-amd64.zip",
+                            "checksum": "b7686fd9c9a2b669ede8931523232fdc9eb3ea33a4c8214f3994a431657cfb8f",
+                            "extension": "zip"
+                        }
+                    ]
+                },
+                "linux": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jdk-linux-amd64.tar.gz",
+                            "checksum": "32e9564b89ec03584cfe77dcf279b339a3f624be57a08aaa0e85c8448ab63c72",
+                            "extension": "tar.gz"
+                        },
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jdk-linux-amd64.tar.xz",
+                            "checksum": "c938250230cbdc07dffc316ef18738954f6ab5c71af33c601bef40b5beb5cd8f",
+                            "extension": "tar.xz"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "openjdk8-jre": [
+        {
+            "version": "8u332",
+            "files": {
+                "windows": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre-windows-amd64.zip",
+                            "checksum": "5479561d7508e61b94f4f4924d36b164c3efb5bbdc38a1801e39abcb9c31abde",
+                            "extension": "zip"
+                        }
+                    ]
+                },
+                "linux": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre-linux-amd64.tar.gz",
+                            "checksum": "b0cdd2a5f966d5ee799df52dd9522c1477bf103388488e7f630276916e78ac5a",
+                            "extension": "tar.gz"
+                        },
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre-linux-amd64.tar.xz",
+                            "checksum": "9181f0ddbfc21c8c94ef6df9c2923db33d2633d82c65e72e554fe592fbdd6415",
+                            "extension": "tar.xz"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "openjdk8-jre_headless": [
+        {
+            "version": "8u332",
+            "files": {
+                "linux": {
+                    "amd64": [
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre_headless-linux-amd64.tar.gz",
+                            "checksum": "d0929f70646241794452c696196cf3302f59b86a6015aa12f24f2d14898793b8",
+                            "extension": "tar.gz"
+                        },
+                        {
+                            "url": "https://github.com/deersoftware-dev/openjdk-buildscript/releases/download/2022.06.19/openjdk8u332-jre_headless-linux-amd64.tar.xz",
+                            "checksum": "839ba3d235f38543b5e9c89fbff9265a12d3e42f6e5a2150f16bc7112dbbfd93",
                             "extension": "tar.xz"
                         }
                     ]
